@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'rol'
     ];
 
     /**
@@ -43,3 +44,11 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 }
+
+
+\App\Models\User::create([
+    'name' => 'Admin',
+    'rol'=>'tecnico',
+    'email' => 'admin@example.com',
+    'password' => bcrypt('12345678'),
+]);
